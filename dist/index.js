@@ -88,12 +88,14 @@ class Carrito {
     }
 }
 class MyEcommerce {
-    constructor() {
+    constructor(productos) {
         this.productos = [];
         this.carrito = new Carrito();
+        this.productos = productos;
     }
     agregarAlCarrito(producto) {
         this.carrito.agregarAlCarrito(producto);
     }
     pagar() { }
 }
+const app = new MyEcommerce([new Producto('TV LED 42"', 9999)]);

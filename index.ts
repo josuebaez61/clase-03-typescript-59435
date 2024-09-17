@@ -130,9 +130,15 @@ class MyEcommerce {
   productos: Producto[] = [];
   carrito: Carrito = new Carrito();
 
+  constructor(productos: Producto[]) {
+    this.productos = productos;
+  }
+
   agregarAlCarrito(producto: Producto) {
     this.carrito.agregarAlCarrito(producto);
   }
 
   pagar() {}
 }
+
+const app = new MyEcommerce([new Producto('TV LED 42"', 9999)]);
